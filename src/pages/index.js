@@ -8,6 +8,7 @@ import Section from 'components/Section';
 import Container from 'components/Container';
 import PostCard from 'components/PostCard';
 import Pagination from 'components/Pagination';
+import Image from 'next/image'
 
 import styles from 'styles/pages/Home.module.scss';
 
@@ -19,11 +20,12 @@ export default function Home({ posts, pagination }) {
     <Layout>
       <WebsiteJsonLd siteTitle={title} />
       <Header>
-        <h1
+        {/*<h1
           dangerouslySetInnerHTML={{
             __html: title,
           }}
-        />
+        />*/}
+        
 
         <p
           className={styles.description}
@@ -35,6 +37,7 @@ export default function Home({ posts, pagination }) {
 
       <Section>
         <Container>
+          
           <h2 className="sr-only">Posts</h2>
           <ul className={styles.posts}>
             {posts.map((post) => {

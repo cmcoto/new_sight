@@ -8,6 +8,7 @@ import { helmetSettingsFromMetadata } from 'lib/site';
 import Nav from 'components/Nav';
 import Main from 'components/Main';
 import Footer from 'components/Footer';
+import Image from 'next/image'
 
 const Layout = ({ children }) => {
   const router = useRouter();
@@ -63,6 +64,17 @@ const Layout = ({ children }) => {
   return (
     <div className={styles.layoutContainer}>
       <Helmet {...helmetSettings} />
+
+      <div className="Banner">
+          <Image
+              priority
+              src="/banner.jpg"
+              
+              height={150}
+              width={810}
+              
+            />
+          </div>
 
       <Nav />
 
